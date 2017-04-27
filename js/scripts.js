@@ -1,23 +1,17 @@
-function drawTree(n) {
-	var star = "";
+function drawTree(treeHeight) {
 	
-	for (var i = 1; i <= n; i++) {
-		for (var j = 1; j < n; j++) {
-			star += "";
+	for (var i = 1; i <= treeHeight; i++) {
+			var star = '*';
+		for (var j = 1; j < i; j++) {
+			star += ' ';
+			star += '*';
 		}
-		for (var j = n-i+1; j < n+i; j++) {
-			star += "*";
-		}
-		for (var j = n+i; j <= 2*n-i; j++) {
-			star += "";
-		}
-		star += "\n"; 
+	console.log(star);
 	}
-	return star;
 }
 
-console.log(drawTree(1));
-console.log(drawTree(2));
-console.log(drawTree(3));
-console.log(drawTree(4));
-console.log(drawTree(5));
+drawTree(1);
+drawTree(2);
+drawTree(3);
+drawTree(4);
+drawTree(5);
